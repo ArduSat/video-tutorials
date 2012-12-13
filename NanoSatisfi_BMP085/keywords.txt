@@ -1,0 +1,44 @@
+#######################################
+# Syntax Coloring Map NanoSatisfi_BMP085
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+NanoSatisfi_BMP085    KEYWORD1
+oss                   KEYWORD1
+p0                    KEYWORD1
+b5                    KEYWORD1
+
+ac1                   KEYWORD1
+ac2                   KEYWORD1
+ac3                   KEYWORD1
+ac4                   KEYWORD1
+ac5                   KEYWORD1
+ac6                   KEYWORD1
+b1                    KEYWORD1
+b2                    KEYWORD1
+mb                    KEYWORD1
+mc                    KEYWORD1
+md                    KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+calibrateData   KEYWORD2
+getRawTemp      KEYWORD2
+getRawPressure  KEYWORD2
+getTemperature  KEYWORD2
+getPressure     KEYWORD2
+getAltitude     KEYWORD2
+read8Data       KEYWORD2
+read16Data      KEYWORD2
+writeData       KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+NS_BMP085	LITERAL1
