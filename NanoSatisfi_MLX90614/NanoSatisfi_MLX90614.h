@@ -1,16 +1,28 @@
 /* 
-   NanoSatisfi_MLX90614.h
+    NanoSatisfi_MLX90614.h - Library for Arduino returns data on temperature from MLX90614 sensor
+    Copyright (C) 2012  Lara Booth for NanoSatisfi
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+////////////////////////////////////////////////////////////////////////////////    
+          Notes:
+          Designed for use with Melexis (C) MLX90614 Infrared Thermometer
    
-   Lara Booth (Intern at NanoSatisfi)
-   17 October 2012
+          Library gathers temperature data over I2C Bus/SM Bus
    
-   Designed for use with Melexis (C) MLX90614 Infrared Thermometer
-   
-   Library gathers temperature data over I2C Bus/SM Bus
-   
-   (c) NanoSatisfi 2012
-   
-   Tested with MLX90614 from Sparkfun, 4.7k Ohm pull-up resistors, .1uF capacitor, and Arduino Uno
+          Tested with MLX90614 from Sparkfun, 4.7k Ohm pull-up resistors, .1uF capacitor, and Arduino Uno
+////////////////////////////////////////////////////////////////////////////////   
    
 */
 
