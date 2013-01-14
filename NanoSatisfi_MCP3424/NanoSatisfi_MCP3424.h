@@ -1,5 +1,5 @@
 /* 
-    MCP3424.h - Library for MCP3424 returns readings from analog to digital converter
+    NanoSatisfi_MCP3424.h - Library for MCP3424 returns readings from analog to digital converter
     Copyright (C) 2012  Jeroen Cappaert for NanoSatisfi
 
     This program is free software: you can redistribute it and/or modify
@@ -33,8 +33,8 @@
    
 */
 
-//#ifndef MCP3424_h
-//#define MCP3424_h
+#ifndef NanoSatisfi_MCP3424_h
+#define NanoSatisfi_MCP3424_h
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -68,11 +68,11 @@
 
 
 // constructor
-class MCP3424
+class NanoSatisfi_MCP3424
 {
   public:
      // constructor
-     MCP3424(byte address, byte gain, byte res);
+     NanoSatisfi_MCP3424(byte address, byte gain, byte res);
      // functions
      void MCP3424Write(byte msg);
      int getMvDivisor();
@@ -91,4 +91,4 @@ class MCP3424
 };
 
 
-//#endif
+#endif

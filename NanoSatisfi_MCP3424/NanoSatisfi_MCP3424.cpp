@@ -1,5 +1,5 @@
 /* 
-    MCP3424.cpp - Library for MCP3424 returns readings from analog to digital converter
+    NanoSatisfi_MCP3424.cpp - Library for MCP3424 returns readings from analog to digital converter
     Copyright (C) 2012  Jeroen Cappaert for NanoSatisfi
 
     This program is free software: you can redistribute it and/or modify
@@ -33,10 +33,10 @@
    
 */
 
-#include "MCP3424.h"
+#include "NanoSatisfi_MCP3424.h"
 
 // constructor takes I2C address, required channel, gain and resolution and configures chip.
-MCP3424::MCP3424(byte address, byte gain, byte res)
+NanoSatisfi_MCP3424::NanoSatisfi_MCP3424(byte address, byte gain, byte res)
 { 
    _address = address;
    _gain = gain;
@@ -45,7 +45,7 @@ MCP3424::MCP3424(byte address, byte gain, byte res)
 
 
 // sets channel
-void MCP3424::setChannel(byte chan) 
+void NanoSatisfi_MCP3424::setChannel(byte chan) 
 {
   byte adcConfig = MCP342X_START | MCP342X_CHANNEL_1 | MCP342X_CONTINUOUS;
   adcConfig |= chan << 5 | _res << 2 | _gain;
@@ -55,7 +55,7 @@ void MCP3424::setChannel(byte chan)
 
 
 // calculates and returns milliVolt devisor based on gain and resolution.
-int MCP3424::getMvDivisor()
+int NanoSatisfi_MCP3424::getMvDivisor()
 {
   int mvDivisor = 1 << (_gain + 2*_res);
   return mvDivisor;
@@ -63,7 +63,7 @@ int MCP3424::getMvDivisor()
 
 // I2C Writes byte to specific register (parameter) on MCP3424 
 // REQUIRES hardcoded address - else, does not work
-void MCP3424::MCP3424Write(byte r) 
+void NanoSatisfi_MCP3424::MCP3424Write(byte r) 
 {
  //Serial.println(_address,HEX); //if necessary, use this to check which address we're writing to
  Wire.beginTransmission(_address);
@@ -73,7 +73,7 @@ void MCP3424::MCP3424Write(byte r)
 }
 
 // Reads data from MCP3424
-long MCP3424::readData()
+long NanoSatisfi_MCP3424::readData()
 {
   long data;
   // pointer used to form int32 data
@@ -115,7 +115,7 @@ long MCP3424::readData()
 }
 
 // returns formatted data from MCP3424 from a specific channel (chan: 0, 1, 2, 3)
-double MCP3424::getChannelmV(byte chan)
+double NanoSatisfi_MCP3424::getChannelmV(byte chan)
 {
   long data;
   setChannel(chan); //sets channel to match parameter 
