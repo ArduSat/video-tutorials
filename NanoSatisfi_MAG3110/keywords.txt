@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map NanoSatisfi_BMP085
+# Syntax Coloring Map for NanoSatisfi_MAG3110
 #######################################
 
 #######################################

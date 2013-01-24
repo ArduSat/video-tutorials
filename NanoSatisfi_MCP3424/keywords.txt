@@ -1,0 +1,48 @@
+#######################################
+# Syntax Coloring Map for NanoSatisfi_MCP3424
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+NanoSatisfi_MCP3424			KEYWORD1
+_res			            KEYWORD1
+_address		            KEYWORD1
+_gain			            KEYWORD1
+adcConfig		            KEYWORD1
+mvDivisor		            KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+MCP3424Write                KEYWORD2
+getMvDivisor		        KEYWORD2
+readData		            KEYWORD2
+setChannel		            KEYWORD2
+getChannelmV		        KEYWORD2	
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+MCP3424_ADDRESS		        LITERAL1
+MCP342X_GAIN_FIELD	        LITERAL1
+MCP342X_GAIN_X1		        LITERAL1
+MCP342X_GAIN_X2		        LITERAL1
+MCP342X_GAIN_X4		        LITERAL1
+MCP342X_GAIN_X8		        LITERAL1
+MCP342X_RES_FIELD	        LITERAL1
+MCP342X_RES_SHIFT	        LITERAL1
+MCP342X_12_BIT		        LITERAL1
+MCP342X_14_BIT		        LITERAL1
+MCP342X_16_BIT		        LITERAL1
+MCP342X_18_BIT		        LITERAL1
+MCP342X_CONTINUOUS	        LITERAL1
+MCP342X_CHAN_FIELD	        LITERAL1
+MCP342X_CHANNEL_1	        LITERAL1
+MCP342X_CHANNEL_2	        LITERAL1
+MCP342X_CHANNEL_3	        LITERAL1
+MCP342X_CHANNEL_4	        LITERAL1
+MCP342X_START		        LITERAL1
+MCP342X_BUSY		        LITERAL1

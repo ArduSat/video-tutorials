@@ -1,14 +1,15 @@
-/* HMC Readout Program for Arduino
+/* 
+MAG3110 Readout Program for Arduino
+Lara Booth for NanoSatisfi
 
-Hacked together by Windell H. Oskay
+For use with "Processing_magField.pde"
 
-Based on the HMC readout library: 
-http://eclecti.cc/hardware/hmc5843-magnetometer-library-for-arduino
-
+Based on the work "hacked together by Windell H. Oskay" 
+http://www.evilmadscientist.com/2010/start-seeing-magnetic-fields/
 */
 
 #include "NanoSatisfi_MAG3110.h"
-#include <Wire.h>
+#include <Wire.h> //I2C
 
 NanoSatisfi_MAG3110 mag;
 
@@ -20,19 +21,19 @@ int inByte = 0; // incoming serial byte
 void setup()
 {
 
-Serial.begin(57600);
-delay(50); // The HMC5843 needs 5ms before it will communicate
-pinMode(ledPin, OUTPUT); 
-mag.configMag();
-establishContact();
+Serial.begin(57600); //set the baud to 57600 (fast!)
+delay(50); // give the MAG3110 some time to communicate
+pinMode(ledPin, OUTPUT); //set the LED pin to output
+mag.configMag(); //configure MAG3110
+establishContact(); //send the character 'A' until contact is established with Processing
 }
 
 void loop()
 {
 
-int x,y,z; 
+int x,y,z; //declare variables x, y, and z
 
-
+//when contact is established, scale x,y,z and write to Serial as two bytes
 if (Serial.available() > 0) {
   
   digitalWrite(ledPin, HIGH); // set the LED on 
@@ -76,8 +77,10 @@ delay(delaytime - 10); // LED off at least 90 ms
 }
 
 void establishContact() {
+  
 while (Serial.available() <= 0) {
 Serial.write('A'); // send a capital A
 delay(300);
 }
+
 }
