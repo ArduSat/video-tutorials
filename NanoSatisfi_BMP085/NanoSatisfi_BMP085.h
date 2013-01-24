@@ -1,20 +1,33 @@
 /* 
-   NanoSatisfi_BMP085.h
+    NanoSatisfi_BMP085.h - Library for Arduino returns data on temperature, pressure, and altitude from BMP085 sensor
+    Copyright (C) 2012  Lara Booth for NanoSatisfi
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+////////////////////////////////////////////////////////////////////////////////    
+          Notes:
+          Designed for use with Bosch (C) BMP085 sensor
    
-   Lara Booth (Intern at NanoSatisfi)
-   26 September 2012
+          Library gathers pressure, temperature, and altitude data over I2C Bus
+          based on instructions specified in BMP085 datasheet
    
-   Designed for use with Bosch (C) BMP085 sensor
-   
-   Library gathers pressure, temperature, and altitude data over I2C Bus
-   based on instructions specified in BMP085 datasheet
-   
-   (c) NanoSatisfi 2012
-   
-   Tested with Sparkfun BMP085 breakout board and Arduino Uno
-   and Saleae Logic Analyzer
+          Tested with Sparkfun BMP085 breakout board and Arduino Uno
+          and Saleae Logic Analyzer
+////////////////////////////////////////////////////////////////////////////////   
    
 */
+
 
 #ifndef NanoSatisfi_BMP085_h
 #define NanoSatisfi_BMP085_h
